@@ -7,12 +7,12 @@ public class libro {
     private int anioPublicacion;
     private int cantdePaginas;
 
-    public libro (String titulo, String utor, int anioPublicacion, int cantdePaginas){
+    public libro (String titulo, String autor, int anioPublicacion, int cantdePaginas){
         this.titulo=titulo;
         this.autor=autor;
         this.anioPublicacion=anioPublicacion;
         this.cantdePaginas=cantdePaginas;
-    
+    }
         public void setTitulo (String titulo){
             this.titulo = titulo;
         }
@@ -37,18 +37,18 @@ public class libro {
         public int getCantdePaginas (){
             return this.cantdePaginas;
         }
-        public boolean esReciente();{
+        public boolean esReciente(){
             if (this.anioPublicacion>2010){
                 return true;
             }else {
                 return false;
             }
         }
-    }
             public static void main(String[] args) {
-            libro libro1= new libro ( "harry Potter", "Rowling", "1997", "368");
-            libro libro2= new libro ( "it", "Stephen King", "1986", "1504");
-            }
+            libro libro1= new libro ( "harry Potter", "Rowling", 1997, 368);
+            libro libro2= new libro ( "it", "Stephen King", 1986, 1504);
 
-    
+            System.out.println(libro1.getTitulo()+ "es reciente?" + libro1.esReciente());
+            System.out.println(libro2.getTitulo()+ "es reciente?" + libro2.esReciente());
+            }
 }
