@@ -1,5 +1,6 @@
 package tp2;
-
+//una aplicacion de recetas guarda informacion de cada plato con su nombre, tiempo de preparacion(minutos), dificultad(facil/media/dificil), y cantidad de ingredientes. 
+//los usuarion quieren saber si una receta es rapida (menos de 30 minutos), aumentar el tiempo si se complica y ver los detalles
 public class receta {
         private String nombre;
         private int tiempo; 
@@ -66,7 +67,7 @@ public class receta {
                 System.out.println("la dificultad de la receta es: " + receta2.getDificultad());
                 System.out.println("la cantidad de ingredientes de la receta es: " + receta2.getCantIngredientes());
                 System.out.println(receta2.esTiempo());
-                receta1.aumentarTiempo(0);
+                receta2.aumentarTiempo(0);
                 System.out.println("el nuevo tiempo de la receta es: " + receta2.getTiempo());
                 System.out.println(receta2.esTiempo());
          }
