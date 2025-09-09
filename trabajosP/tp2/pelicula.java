@@ -1,4 +1,4 @@
-package tp2.trabajopractico2;
+package trabajosP.tp2;
 
 public class pelicula {
     private String titulo, director, genero;

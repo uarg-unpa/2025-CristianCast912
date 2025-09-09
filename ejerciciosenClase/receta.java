@@ -1,4 +1,4 @@
-package tp2;
+package ejerciciosenClase;
 //una aplicacion de recetas guarda informacion de cada plato con su nombre, tiempo de preparacion(minutos), dificultad(facil/media/dificil), y cantidad de ingredientes. 
 //los usuarion quieren saber si una receta es rapida (menos de 30 minutos), aumentar el tiempo si se complica y ver los detalles
 public class receta {

@@ -1,4 +1,4 @@
-package tp2.trabajopractico2;
+package trabajosP.tp2;
 
 public class cancion {
     private String titulo, autor, disco;

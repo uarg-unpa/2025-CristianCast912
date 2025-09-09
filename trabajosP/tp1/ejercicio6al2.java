@@ -1,4 +1,4 @@
-package tp1;
+package trabajosP.tp1;
 
 import java.util.Scanner;
 public class ejercicio6al2 {
