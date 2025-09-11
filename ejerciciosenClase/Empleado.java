@@ -102,9 +102,18 @@ public class Empleado {
                                     System.out.println("ingrese cargo");
                                     String cargo = sc.nextLine();
                                     sc.nextLine();
-
+                                    
                                     Empleado e1= new Empleado (legajo, sueldo, departamento, apellido, cargo);
                                     System.out.println(e1);
+                                    System.out.println("es jefe? " + e1.esJefe());
+                                    System.out.println("ingrese aumento");
+                                    double aumento = sc.nextDouble();
+                                    e1.aumentarSueldo(aumento);
+                                    System.out.println("su nuevo sueldo es " + e1.getSueldo());
+                                    System.out.println("ingrese porcentaje de bono");
+                                    double porcentaje = sc.nextDouble();
+                                    System.out.println("su bono es " + e1.calcularBono(porcentaje));
+                                    sc.nextLine();
 
                                     System.out.println("ingrese legajo");
                                     legajo = sc.nextInt ();
@@ -135,7 +144,10 @@ public class Empleado {
                                     
                                     Empleado e2 = new Empleado (legajo, sueldo, departamento2, apellido, cargo);
                                     System.out.println(e2);
+                                    
                                     sc.close();
+
+                                    
                                 }
     }
         
