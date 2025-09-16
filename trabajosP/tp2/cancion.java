@@ -1,38 +1,145 @@
 package trabajosP.tp2;
 
+import java.util.Scanner;
+
+// clase cancion
 public class cancion {
-    private String titulo, autor, disco;
-    private int duracion;
+    private String nombre; 
+    private String autor; 
+    private double duracion;
+    private albumGen albumGen;
 
-    public cancion(String titulo, String autor, int duracion, String disco) {
-        this.titulo = titulo; 
-        this.autor = autor; 
-        this.duracion = duracion;
-        this.disco = disco;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-    public String getTitulo() {
-        return this.titulo;
-    }
-    public void setAutor(String autor) {
+    //constructor
+    public cancion(String nombre, String autor, double duracion, albumGen albumGen) {
+        this.nombre = nombre;
         this.autor = autor;
+        this.duracion = duracion; 
+        this.albumGen = albumGen;
     }
-    public String getAutor() {
-        return this.autor;  
-    }   
-    public void setDuracion(int duracion) {
-        this.duracion = duracion;
-    }
-    public int getDuracion() {
-        return this.duracion;    
-    }   
-    public void setDisco(String disco) {        
-        this.disco = disco;
-    }
-    public String getDisco() {
-        return this.disco;  
-    }
+
+        //getter y setter
+        public String getNombre() {
+            return nombre;
+        }
+        public void setNombre(String nombre) {
+            this.nombre = nombre;
+        }
+        public String getAutor() {
+            return autor;
+        }
+        public void setAutor(String autor) {
+            this.autor = autor;
+        }   
+        public double getDuracion() {
+            return duracion;
+        }
+        public void setDuracion(double duracion) {
+            this.duracion = duracion;
+        }
+        public albumGen getAlbumGen() {
+            return albumGen;    
+        }
+        public void setAlbumGen (albumGen albumGen) {
+            this.albumGen = albumGen;
+        }
+
+        //metodo esLargo
+        public boolean esLargo() {
+            if (this.duracion > 4.0){
+                return true;
+            } else {
+                return false;
+            }            
+        }
+
+            //metodo cambiarNombre
+            public void cambiarNombre (String nuevoNombre) {
+                this.nombre = nuevoNombre;
+            }
+
+                //metodo compararArt
+                public boolean compararArt () {
+                    if (this.autor.equals("duki")){
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+
+                    //metoto toString
+                     public String toString(){
+                        return "cancion (nombre: " + nombre + ", autor: " + autor + ", duracion: " + duracion + ",album y genero" + albumGen + ")" ;
+                     }
+
+                        //creacion de objeto
+                     
+                        public static void main(String args[]) { 
+
+                            //invocar escaner
+                            Scanner sc = new Scanner (System.in);
+                            
+                            //crear nuevo album
+                            System.out.println("ingrese nombre del album");
+                            String album = sc.nextLine();
+                            sc.nextLine();
+                            System.out.println("ingrese genero del album");
+                            String genero = sc.nextLine();
+                            sc.nextLine();
+                            albumGen a1 = new albumGen (album, genero);
+                            System.out.println(a1);
+
+                            //crear nueva cancion 1
+                            System.out.println("ingrese nombre de la cancion");
+                            String nombre = sc.nextLine();
+                            sc.nextLine();
+                            System.out.println("ingrese autor de la cancion");
+                            String autor = sc.nextLine();
+                            sc.nextLine();
+                            System.out.println("ingrese duracion de la cancion");
+                            double duracion = sc.nextDouble();
+                            sc.nextLine();
+                            cancion c1 = new cancion (nombre, autor, duracion, a1);
+
+                            System.out.println(c1);
+                            System.out.println("la cancion es larga? " + c1.esLargo());
+                            System.out.println("el autor es duki? " + c1.compararArt());
+
+                            //cambiar nombre
+                            System.out.println("el nuevo nombre de la cancion es");
+                            c1.cambiarNombre(sc.nextLine());
+                            sc.nextLine();
+                            System.out.println(c1);
+
+                            //crear album 2
+                            System.out.println("ingrese el nombre del album");
+                            String album2 = sc.nextLine();
+                            sc.nextLine();
+                            System.out.println("ingrese el genero del album");
+                            String genero2 = sc.nextLine();
+                            sc.nextLine();
+                            albumGen a2 = new albumGen (album2, genero2);
+                            System.out.println(a2);
+
+                            //crear nueva cancion 2
+                            System.out.println("ingrese nombre de la cancion");
+                            String nombre2 = sc.nextLine();
+                            sc.nextLine();
+                            System.out.println("ingrese el autor de la cancion");
+                            String autor2 = sc.nextLine();
+                            sc.nextLine();
+                            System.out.println("ingrese duracion de la cancion");
+                            double duracion2 = sc.nextDouble();
+                            sc.nextLine();
+                            cancion c2 = new cancion (nombre2, autor2, duracion2, a2);
+                            System.out.println(c2);
+                            System.out.println("la cancion es larga? " + c2.esLargo());
+                            System.out.println("el autor es duki? " + c2.compararArt());
+                            //cambiar nombre
+                            System.out.println("el nuevo nombre de la cancion es");
+                            c2.cambiarNombre(sc.nextLine());
+                            sc.nextLine();
+                            System.out.println(c2);
+
+                            sc.close();
+                            }
 }
