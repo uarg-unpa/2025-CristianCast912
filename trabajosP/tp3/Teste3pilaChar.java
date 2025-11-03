@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Teste3pilaChar {
     public static void main(String[] args) {
     Scanner sn = new Scanner (System.in);
-    e3pilaChar pila = new e3pilaChar();
+    E3pilaChar pila = new E3pilaChar();
     System.out.println("ingrese una palabra");
     String palabra = sn.nextLine();
 
