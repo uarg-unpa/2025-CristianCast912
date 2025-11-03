@@ -1,4 +1,4 @@
-package ejerciciosenClase;
+package ejenClase;
 
 public class Domicilio {
     private String calle;

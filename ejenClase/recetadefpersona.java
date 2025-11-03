@@ -1,4 +1,4 @@
-package ejerciciosenClase;
+package ejenClase;
 
 import java.util.Scanner;
 

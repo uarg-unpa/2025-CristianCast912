@@ -1,0 +1,23 @@
+PILA aux = new PILA ();
+PILA pila = nueva PILA ();
+int X;
+//se carga la pila 
+
+//opcion 1
+while (!pila.estavacia() ){
+        x=pila.sacar ();
+        if (!aux.estaLLena()){
+            aux.meter(x);
+        }
+        System.out.println(x);
+	
+{
+//opcion 2
+
+while(!aux.estavacia()){
+    if (!pila.estallena()){
+        pila.meter(aux.sacar());
+        x= aux.sacar();
+        pila.meter(x);
+    }
+}

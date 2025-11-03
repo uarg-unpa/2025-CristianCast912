@@ -1,4 +1,4 @@
-package ejerciciosenClase;
+package ejenClase;
 
 public class TestPersona2 {
     public static void main(String[] args) {

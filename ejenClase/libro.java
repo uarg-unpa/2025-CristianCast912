@@ -1,4 +1,4 @@
-package ejerciciosenClase;
+package ejenClase;
 
 public class libro {
     
