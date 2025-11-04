@@ -29,7 +29,7 @@ public class ColaInt {
                             for ( int i = 0 ; i < fin - 1 ; i++){   //desplaza los elementos restantes hacia la izquierda
                                 elementos[i] = elementos [i + 1];
                             }
-                            fin--;                                  //reduce fin tra el desplazamiento
+                            fin--;                                  //reduce fin tras el desplazamiento
                             return aux;
                         }
 
@@ -42,7 +42,7 @@ public class ColaInt {
                                     if(!cola.estaVacia()){
                                         cola.desencolar();
                                     } else {
-                                        System.out.println("la cola eta vacia");
+                                        System.out.println("la cola esta vacia");
                                     }                               
                                 
                             }
