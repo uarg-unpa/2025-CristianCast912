@@ -4,13 +4,13 @@
 
 package trabajosP.tp4;
 
-public class ejercicio3 {
+public class ejercicio3FrenteFijo {
  private int [] elementos;
  private int frente;
  private int fin;
  private final int MAX = 10;
 
-    public ejercicio3() {
+    public ejercicio3FrenteFijo() {
         elementos = new int [MAX];
         frente = 0;
         fin= 0;
@@ -22,10 +22,13 @@ public class ejercicio3 {
                 return fin == MAX;
             }
                 public void encolar(int elem){
+                    if (!estaLlena()) {
                     elementos [fin]= elem;
                     fin ++;
+                    }
                 }
                     public int desencolar() {
+                        if (!estaVacia()) {
                         int aux = elementos [frente];
 
                         for (int i = 0 ; i < fin - 1 ; i++){
@@ -33,6 +36,8 @@ public class ejercicio3 {
                         }
                         fin--;
                         return aux;
+                    }
+                        return -1; // indica que la cola estaba vacía
                     }
                         public int mostrar () {
                             return elementos[frente];

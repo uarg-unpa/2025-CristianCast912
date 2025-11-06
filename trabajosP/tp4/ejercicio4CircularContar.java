@@ -5,14 +5,14 @@
 package trabajosP.tp4;
 
 
-public class ejercicio4 {
+public class ejercicio4CircularContar {
 private int [] elementos;
 private int frente;
 private int ultimo;
 private final int MAX = 10;
 
 
-    public ejercicio4() {
+    public ejercicio4CircularContar() {
         elementos = new int [MAX];
         frente = 0;
         ultimo= 0;
@@ -53,7 +53,7 @@ private final int MAX = 10;
                             
                             public int contar(){
                                 int cont = 0;
-                                ejercicio4 colaAux = new ejercicio4();
+                                ejercicio4CircularContar colaAux = new ejercicio4CircularContar();
                                 //recorro la cola usando una secundaria para no manejarla como array
                                 while(!this.estaVacia()){
                                     int elem = this.desencolar();

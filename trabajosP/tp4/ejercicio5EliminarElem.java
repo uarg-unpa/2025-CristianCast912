@@ -1,13 +1,13 @@
 // 5. Agregar un método en la clase Cola que elimine los elementos repetidos de la cola.
 package trabajosP.tp4;
 
-public class ejercicio5 {
+public class ejercicio5EliminarElem {
  private int [] elementos;
  private int frente;
  private int fin;
  private final int MAX = 10;
 
-    public ejercicio5 () {
+    public ejercicio5EliminarElem () {
         elementos = new int [MAX];
         frente = 0;
         fin= 0;
@@ -35,14 +35,14 @@ public class ejercicio5 {
                             return elementos[frente];
                         }
                             public void eliminarRepetidos() {
-                                ejercicio5 colaAux = new ejercicio5();
+                                ejercicio5EliminarElem colaAux = new ejercicio5EliminarElem();
 
                                 while(!this.estaVacia()){
                                     int elem = this.desencolar();
                                     boolean encontrado = false;
                                     
                                     // Verifico si el elemento ya está en la cola auxiliar
-                                    ejercicio5 colaTemp = new ejercicio5();
+                                    ejercicio5EliminarElem colaTemp = new ejercicio5EliminarElem();
                                     while(!colaAux.estaVacia()) {
                                         int auxElem = colaAux.desencolar();
                                         if(auxElem == elem) {

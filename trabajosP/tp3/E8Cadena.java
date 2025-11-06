@@ -43,18 +43,18 @@ public class E8Cadena {
                                             int CopiaElem = cima + 1;
                                             char [] aux = new char [CopiaElem];
 
-                                            System.out.println("Copiando elementos en aux");
+                                            //copia los elementos en una pila auxiliar
                                                 for (int i = 0; i < CopiaElem; i++) {
                                                     aux [i] = sacar ();
                                                     System.out.println("Elemento en posición " + i + " es " + aux[i]);
                                                 }
 
-                                                    System.out.println("Volviendo a meter los elementos en la pila");
+                                                    // se vulelve a meter los elem a la pila principal
                                                     for (int i = 0; i < CopiaElem; i++){
                                                         meter (aux [i]);
                                                     }
 
-                                                    System.out.println("Verificando si es palindromo");
+                                                    //se verifica si es palindromo
                                                         for (int i = 0; i < CopiaElem / 2 ; i++){
                                                             if (aux [i] != aux [CopiaElem - 1 - i]) {
                                                                 System.out.println("No es palindromo, diferentes en posicion " + i);

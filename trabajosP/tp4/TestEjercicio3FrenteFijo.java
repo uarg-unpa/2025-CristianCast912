@@ -2,10 +2,10 @@ package trabajosP.tp4;
 
 import java.util.Scanner;
 
-public class TestEjercicio3 {
+public class TestEjercicio3FrenteFijo {
     public static void main(String[] args) {
     Scanner sn = new Scanner(System.in);    
-    ejercicio3 cola = new ejercicio3();
+    ejercicio3FrenteFijo cola = new ejercicio3FrenteFijo();
     int opcion = 0;
     do {
         System.out.println("1. Encolar elemento");
