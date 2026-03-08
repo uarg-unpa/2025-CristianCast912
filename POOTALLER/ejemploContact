@@ -1,0 +1,92 @@
+package TALLERPOO;
+
+public class ejemploContact {
+private String name, mail;
+    ejemploContact(String name, String mail){
+        this.name=name;
+        this.mail=mail; }
+        public String getName(){
+            return this.name;
+        }
+        public String getMail(){
+            return this.mail;
+        }
+        public void setName(String name){
+            this.name= name;
+        }
+        public void setMail(String mail){
+            this.mail= mail;
+        }
+        }
+            public class ContactList {
+            private Contact [] contacts;
+            private int size, next;
+            public ContactList(int n){
+            this.size=n;
+            this.contacts = new Contact[size];
+            this.next=0;
+            }
+                public void addContact(Contact contact) {
+                if (!(this.next < this.size))
+                this.enlarge();
+                contacts[next]=contact;
+                this.next++;
+                }
+                    public void removeContact(String contactName){
+                    boolean found=false;
+                    int count=0;
+                    Contact aux;
+                    while(!found && count<next){
+                    if (contacts[count] != null) {
+                    aux=contacts[count];
+                    if (aux.getName().equals(contactName))
+                    found=true;
+                    }
+                    count++;
+                    }
+                    if (found)
+                    contacts[count-1]= null;
+                    }
+                        public boolean searchContact(String contactName){
+                        boolean found=false;
+                        int count=0;
+                        Contact aux;
+                        while(!found && count<next) {
+                        if (contacts[count] != null) {
+                        aux=contacts[count];
+                        if (aux.getName().equals(contactName))
+                        found=true;
+                        }
+                        count++;
+                        }
+                        return found;
+                        }
+                            public void listContacts() {
+                            int count=0;
+                            Contact aux;
+                            while(count<next) {
+                            if (contacts[count] != null) {
+                            aux=contacts[count];
+                            System.out.println(aux.getName());
+                            System.out.println(aux.getMail());
+                            }
+                            count++;
+                            }
+                            }
+                                private void enlarge() {
+                                int count2=0;
+                                Contact [] aux=new Contact[size+100];
+                                for(int count1=0; count1<size; count1++)
+                                if (contacts[count1] != null) {
+                                aux[count2]=contacts[count1];
+                                count2++;
+                                }
+                                this.contacts = aux;
+                                this.next=count2;
+                                this.size=size+100;
+                                }
+
+                                eliminar
+                                Cancion[2] = Cancion[10];
+                                next--;
+            }

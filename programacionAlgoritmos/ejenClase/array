@@ -1,0 +1,29 @@
+// para declarar un array hacemos
+// int elemntos[];
+//para darle un valor hacemos
+//elementos = new int [n];
+// para nosotros llamar al metodo tenemos que hacer (acceso al atributo publico)
+//elemntos.lenght
+
+//generalmente para acceder a un elemento hacemos (ejemplo)
+// int []  nums = new int [10];
+//for (int i = 0; i<nums.lenght; i ++)
+//      numss[i]= i * 2; (carga con datos la pocision )
+
+//paso de un array como argumento de llamada a un metodo
+//<modificador de acceso> < tipo de retorno> <identificador (nombre)> (<tipo de dato> []){
+// public void metodoEjemplo (int num[]){ (ejemplo)
+
+//ejemplo
+//public int [] nombre_metodo();
+//    nums []
+//    return nums [];
+
+
+
+//recorrido for-each
+// (sintaxis)  for (<tipo de dato> : elementos){ (recorre todo el array)
+// (ejemplo)   for (int num : elemento){
+//                 system.out.println(num);
+//             }
+
