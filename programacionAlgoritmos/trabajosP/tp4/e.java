@@ -1,6 +1,6 @@
 package trabajosP.tp4;
 
-public class auto {
+public class e {
     private String patente;
     private int movimientos;
 
